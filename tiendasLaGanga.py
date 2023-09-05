@@ -38,7 +38,12 @@ while(opcion != 6):
             print(f"El nombre del producto es: {productoSeleccionado['nombre']} \n El codigo del producto es: {productoSeleccionado['codigo']}\n La descripcion del producto es: {productoSeleccionado['descripcion']} \n La foto del producto es: {productoSeleccionado['foto']} \n El precio del producto es: {productoSeleccionado['precio']} \n La cantidad del producto es: {productoSeleccionado['cantidadEnBodega']} \n La fecha cuando entro a bodega es: {productoSeleccionado['fechaEntradaBodega']}")
             print("--------------------------------------------------")            
     elif opcion ==3:
-        pass
+        mostrarProducto = int(input("Escriba el codigo del producto el cual quiere buscar: "))
+        for producto in productos:
+            if mostrarProducto == producto['codigo']:
+                print(f"Este es el producto el cual busca: {productoSeleccionado}")
+            else:
+                print("El producto no esta en la lista.")
     elif opcion ==4:
         pass
     elif opcion ==5:
